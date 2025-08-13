@@ -4,9 +4,6 @@ import { SearchResultsPage } from '../../pages/SearchResultsPage';
 import { MovieDetailsPage } from '../../pages/MovieDetailsPage';
 
 
-
-
-
 test.describe('Search Movie Functionality', () => {
     
     //Pages 
