@@ -21,7 +21,7 @@ export class MovieDetailsPage {
         return this.page.getByRole('link', { name: new RegExp(`^${title}$`) });
     }
      movieDetailYear(year: string): Locator {
-        return this.page.getByText(new RegExp(`${year}`));
+        return this.page.getByRole('heading', { name: new RegExp(`${year}`) });
     }
 
     movieRating(ratingPercent: string): Locator{
