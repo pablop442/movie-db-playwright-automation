@@ -15,7 +15,7 @@ export class MovieDetailsPage {
         this.movieDetailsMediaSection = page.getByRole('heading', { name: 'Media' });
         this.playTrailerButton = page.getByRole('link', { name: 'Play Trailer' });
         this.trailerVideoIframe = page.getByRole('dialog', { name: 'Play Trailer' }).locator('iframe').contentFrame().locator('video')
-        this.closeTrailerButton = page.getByRole('button', { name: 'Close' });
+        this.closeTrailerButton = page.getByRole('dialog', { name: 'Play Trailer' }).getByLabel('Close')
     }
     movieDetailTitle(title: string): Locator {
         return this.page.getByRole('link', { name: new RegExp(`^${title}$`) });
