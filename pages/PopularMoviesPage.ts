@@ -6,15 +6,18 @@ export class PopularMoviesPage {
     readonly popularMoviesSearchButton: Locator;
     readonly popularMoviesLoadMoreButton: Locator;
     readonly popularMoviesTitles: Locator;
+    readonly actionGenreButton: Locator;
     
 
     constructor(page: Page) {
         this.page = page;
-        this.sortDropdownButton = page.getByRole('heading', { name: 'Sort', exact: true });
-        this.sortResultsByDropdownButton = page.getByRole('combobox').filter({ hasText: 'Popularity' }).getByLabel('select');
+        this.sortDropdownButton = page.locator('.name').first()
+        this.sortResultsByDropdownButton = page.locator('//select[@id="sort_by"]//preceding::button')
         this.popularMoviesSearchButton = page.getByRole('link', { name: 'Search' }).nth(1);
         this.popularMoviesLoadMoreButton = page.getByRole('paragraph').filter({ hasText: 'Load More' });
         this.popularMoviesTitles = page.locator('//h2//a[@title]');
+        this.actionGenreButton = page.getByRole('link', { name: 'Action' });
+
     }
 
     sortBySelectOption(sortByText: string): Locator {
