@@ -33,17 +33,17 @@ Includes UI and API tests, a Page Object Model structure, and CI-ready config to
    cd playwright-moviedb
 
 2. **Install Dependencies**
-  ```bash
-npm install
-npx playwright install
+   ```bash
+   npm install
+   npx playwright install
 
 3. **Set Environment Variables**
-  ```bash
-TMDB_API_URL=https://api.themoviedb.org/3
-TMDB_API_KEY=your_api_key_here
+   ```bash
+   TMDB_API_URL=https://api.themoviedb.org/3
+   TMDB_API_KEY=your_api_key_here
 
 3. **Run the Tests**
-  ```bash
-npx playwright test
+   ```bash
+   npx playwright test
 
 
